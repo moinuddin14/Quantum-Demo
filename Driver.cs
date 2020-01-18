@@ -5,14 +5,14 @@ using Microsoft.Quantum.Simulation.Simulators;
 
 namespace quantum_console_demo
 {
-    class Driver
+  class Driver
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            using (var qsim = new QuantumSimulator())
-            {
-                HelloQ.Run(qsim).Wait();
-            }
-        }
+      using (var qsim = new QuantumSimulator())
+      {
+        HelloQ.Run(qsim).Wait();
+      }
     }
+  }
 }

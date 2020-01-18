@@ -38,12 +38,14 @@
             // }
 
             using(qubits = Qubit[2]) {
+
+                // X(qubits[0]);
                 H(qubits[0]);
-                H(qubits[1]);
+                // H(qubits[1]);
 
                 CNOT(qubits[0], qubits[1]);
 
-                DumpRegister("", qubits);
+                // DumpRegister("", qubits);
 
                 let r1 = M(qubits[0]);
                 let r2 = M(qubits[1]);

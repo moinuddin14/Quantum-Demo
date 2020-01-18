@@ -19,12 +19,6 @@ namespace quantum_console_demo
 
         String ICallable.Name => "HelloQ";
         String ICallable.FullName => "quantum_console_demo.HelloQ";
-        protected ICallable MicrosoftQuantumExtensionsDiagnosticsDumpRegister
-        {
-            get;
-            set;
-        }
-
         protected Allocate Allocate
         {
             get;
@@ -91,53 +85,49 @@ namespace quantum_console_demo
                     System.Runtime.ExceptionServices.ExceptionDispatchInfo __arg1__ = null;
                     try
                     {
-#line 41 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+#line 43 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
                         MicrosoftQuantumIntrinsicH.Apply(qubits[0L]);
-#line 42 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
-                        MicrosoftQuantumIntrinsicH.Apply(qubits[1L]);
-#line 44 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
-                        MicrosoftQuantumIntrinsicCNOT.Apply((qubits[0L], qubits[1L]));
 #line 46 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
-                        MicrosoftQuantumExtensionsDiagnosticsDumpRegister.Apply(("", qubits));
-#line 48 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+                        MicrosoftQuantumIntrinsicCNOT.Apply((qubits[0L], qubits[1L]));
+#line 50 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
                         var r1 = MicrosoftQuantumIntrinsicM.Apply(qubits[0L]);
-#line 49 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
-                        var r2 = MicrosoftQuantumIntrinsicM.Apply(qubits[1L]);
 #line 51 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
-                        MicrosoftQuantumIntrinsicMessage.Apply(String.Format("Qubit set {0} : ", i));
-#line 52 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
-                        MicrosoftQuantumIntrinsicMessage.Apply(String.Format("Value of 1st Qubit : {0}", r1));
+                        var r2 = MicrosoftQuantumIntrinsicM.Apply(qubits[1L]);
 #line 53 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
-                        MicrosoftQuantumIntrinsicMessage.Apply(String.Format("Value of 2nd Qubit : {0}", r2));
+                        MicrosoftQuantumIntrinsicMessage.Apply(String.Format("Qubit set {0} : ", i));
+#line 54 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+                        MicrosoftQuantumIntrinsicMessage.Apply(String.Format("Value of 1st Qubit : {0}", r1));
 #line 55 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+                        MicrosoftQuantumIntrinsicMessage.Apply(String.Format("Value of 2nd Qubit : {0}", r2));
+#line 57 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
                         if (((r1 == Result.Zero) && (r2 == Result.Zero)))
                         {
-#line 56 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+#line 58 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
                             case00 = (case00 + 1L);
                         }
 
-#line 58 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+#line 60 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
                         if (((r1 == Result.Zero) && (r2 == Result.One)))
                         {
-#line 59 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+#line 61 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
                             case01 = (case01 + 1L);
                         }
 
-#line 61 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+#line 63 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
                         if (((r1 == Result.One) && (r2 == Result.Zero)))
                         {
-#line 62 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+#line 64 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
                             case02 = (case02 + 1L);
                         }
 
-#line 64 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+#line 66 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
                         if (((r1 == Result.One) && (r2 == Result.One)))
                         {
-#line 65 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+#line 67 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
                             case03 = (case03 + 1L);
                         }
 
-#line 68 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+#line 70 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
                         MicrosoftQuantumIntrinsicResetAll.Apply(qubits);
                     }
 #line hidden
@@ -160,7 +150,7 @@ namespace quantum_console_demo
                 }
             }
 
-#line 73 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
+#line 75 "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/Operations.qs"
             MicrosoftQuantumIntrinsicMessage.Apply(String.Format("Case 00 : {0} Case01 : {1} Case02 : {2} Case03 : {3}", case00, case01, case02, case03));
 #line hidden
             return QVoid.Instance;
@@ -169,7 +159,6 @@ namespace quantum_console_demo
         ;
         public override void Init()
         {
-            this.MicrosoftQuantumExtensionsDiagnosticsDumpRegister = this.Factory.Get<ICallable>(typeof(Microsoft.Quantum.Extensions.Diagnostics.DumpRegister<>));
             this.Allocate = this.Factory.Get<Allocate>(typeof(Microsoft.Quantum.Intrinsic.Allocate));
             this.MicrosoftQuantumIntrinsicCNOT = this.Factory.Get<IUnitary<(Qubit,Qubit)>>(typeof(Microsoft.Quantum.Intrinsic.CNOT));
             this.MicrosoftQuantumIntrinsicH = this.Factory.Get<IUnitary<Qubit>>(typeof(Microsoft.Quantum.Intrinsic.H));
