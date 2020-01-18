@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/quantum-console-demo.csproj": {}
+  },
+  "projects": {
+    "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/quantum-console-demo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/quantum-console-demo.csproj",
+        "projectName": "quantum-console-demo",
+        "projectPath": "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/quantum-console-demo.csproj",
+        "packagesPath": "/Users/moin/.nuget/packages/",
+        "outputPath": "/Users/moin/Documents/quantum-computing-demo/quantum-console-demo/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/moin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.Quantum.Development.Kit": {
+              "target": "Package",
+              "version": "[0.10.1912.501, )"
+            },
+            "Microsoft.Quantum.Standard": {
+              "target": "Package",
+              "version": "[0.10.1912.501, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[3.0.2, 3.0.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
